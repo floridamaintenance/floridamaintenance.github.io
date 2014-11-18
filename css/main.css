@@ -115,14 +115,6 @@ img.thumb{
 #thumbDiv4:hover p, #thumbDiv4:hover h3 {
   color:#666666 !important;
 }
-.logo {
-  margin-top:-20px;
-}
-@media screen and (max-width: 640px) {
-  .logo {
-    max-width:70%;
-  }
-}
 .navbar-default {
   background-color:#b00000;
   border-color:#b00000;
@@ -210,4 +202,12 @@ p {
  height:32px;
  width:100%;
  background:#b00000;
+}
+@media (max-width:768px) {
+  .logo {
+    max-width:38%;
+  }
+}
+.logo {
+  margin-top:-20px;
 }
