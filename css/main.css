@@ -207,6 +207,17 @@ p {
   #pressurecleaningtxt, #sweepingtxt, #constructioncleanuptxt, #graffitiremovaltxt {
     margin-bottom: 100px;
   }
+  .fixed {
+    position: relative;
+  }
+  #footer {
+    left:0px;
+    bottom:0px;
+    height:150px;
+    width:100%;
+    color: white;
+    background:#b00000;
+  }
 }
 .logo {
   margin-top:-20px;
