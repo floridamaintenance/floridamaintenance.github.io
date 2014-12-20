@@ -37,9 +37,6 @@ footer {
   height: 100%;
   margin: 0 auto -60px;
 }
-#footer {
-  height: 120px;
-}
 img.thumb{
   opacity: 0.80;
   filter: alpha(opacity=80);
@@ -192,13 +189,16 @@ h3 {
 p {
   color:#999999;
 }
+.fixed {
+  position: fixed;
+}
 #footer {
- left:0px;
- bottom:0px;
- height:100px;
- width:100%;
- color: white;
- background:#b00000;
+  left:0px;
+  bottom:0px;
+  height:100px;
+  width:100%;
+  color: white;
+  background:#b00000;
 }
 @media (max-width:768px) {
   .logo {
