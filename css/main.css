@@ -204,6 +204,9 @@ p {
   .logo {
     max-width:38%;
   }
+  #pressurecleaningtxt, #sweepingtxt, #constructioncleanuptxt, #graffitiremovaltxt {
+    margin-bottom: 100px;
+  }
 }
 .logo {
   margin-top:-20px;
