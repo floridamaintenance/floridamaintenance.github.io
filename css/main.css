@@ -37,9 +37,6 @@ footer {
   height: 100%;
   margin: 0 auto -60px;
 }
-#push{
-  height: 120px;
-}
 #footer {
   height: 120px;
 }
@@ -196,11 +193,11 @@ p {
   color:#999999;
 }
 #footer {
- position:fixed;
  left:0px;
  bottom:0px;
- height:32px;
+ height:100px;
  width:100%;
+ color: white;
  background:#b00000;
 }
 @media (max-width:768px) {
