@@ -85,6 +85,9 @@ img.thumb{
   background-size: cover;
   position: relative;
 }
+.services h2 {
+  color:#b00000;
+}
 .services h3 {
   color:#b00000;
 }
