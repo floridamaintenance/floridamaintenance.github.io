@@ -69,16 +69,20 @@ img.thumb{
 }
 #pressurecleaning  {
    background-image:url('../img/worker.jpg');
- }
+}
 #sweeping  {
    background-image:url('../img/sweeper.jpg');
- }
+}
 #constructioncleanup  {
    background-image:url('../img/garage.jpg');
- }
+}
 #graffitiremoval  {
    background-image:url('../img/graffiticleanup1080p.jpg');
- }
+}
+p.max {
+  max-width: 1000px;
+  display: inline-block;
+}
 .service {
   height:648px;
   background-position: center;
