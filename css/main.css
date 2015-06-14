@@ -79,7 +79,7 @@ img.thumb{
 #graffitiremoval  {
    background-image:url('../img/graffiticleanup1080p.jpg');
 }
-p.max {
+.max {
   max-width: 1000px;
   display: inline-block;
 }
