@@ -80,7 +80,7 @@ img.thumb{
    background-image:url('../img/graffiticleanup1080p.jpg');
 }
 .max {
-  max-width: 1000px;
+  max-width: 800px;
   display: inline-block;
 }
 .service {
@@ -144,6 +144,9 @@ a:visited {
 }
 .well a:link, .well a:visited, .well a:hover, .well a:active {
   color: #b00000 !important;
+}
+.contact {
+  font-size: 24px;
 }
 .contact a:link, .contact a:visited, .contact a:hover, .contact a:active {
   color: #b00000 !important;
