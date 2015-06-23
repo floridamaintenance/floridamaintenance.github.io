@@ -60,7 +60,7 @@ img.thumb{
   opacity: 1.0;
   filter: alpha(opacity=100);
 }
-#pressurecleaningtxt, #sweepingtxt, #constructioncleanuptxt, #graffitiremovaltxt {
+#pressurecleaningtxt, #sweepingtxt, #constructioncleanuptxt, #graffitiremovaltxt, #powerscrubbingtxt {
   background-color:#e3e3e3;
   position: absolute;
   bottom: 0;
@@ -78,6 +78,9 @@ img.thumb{
 }
 #graffitiremoval  {
    background-image:url('../img/graffiticleanup1080p.jpg');
+}
+#powerscrubbing {
+  background-image:url('../img/powerscrubbing.jpg');
 }
 .max {
   max-width: 800px;
