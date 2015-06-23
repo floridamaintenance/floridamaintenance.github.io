@@ -4,6 +4,9 @@ html, body {
 body {
   overflow-x:hidden;
 }
+form label {
+  font-size: 14px;
+}
 .carousel {
   height:60%;
 }
