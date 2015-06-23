@@ -68,19 +68,20 @@ img.thumb{
   filter: alpha(opacity=90);
 }
 #pressurecleaning  {
-   background-image:url('../img/worker.jpg');
+  background-image:url('../img/worker.jpg');
 }
 #sweeping  {
-   background-image:url('../img/sweeper.jpg');
+  background-image:url('../img/sweeper.jpg');
 }
 #constructioncleanup  {
-   background-image:url('../img/garage.jpg');
+  background-image:url('../img/garage.jpg');
 }
 #graffitiremoval  {
-   background-image:url('../img/graffiticleanup1080p.jpg');
+  background-image:url('../img/graffiticleanup1080p.jpg');
 }
 #powerscrubbing {
   background-image:url('../img/powerscrubbing.jpg');
+  background-position: center top;
 }
 .max {
   max-width: 800px;
