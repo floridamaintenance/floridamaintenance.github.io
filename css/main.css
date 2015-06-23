@@ -60,6 +60,10 @@ img.thumb{
   opacity: 1.0;
   filter: alpha(opacity=100);
 }
+#thumbDiv5:hover img {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
 #pressurecleaningtxt, #sweepingtxt, #constructioncleanuptxt, #graffitiremovaltxt, #powerscrubbingtxt {
   background-color:#e3e3e3;
   position: absolute;
@@ -121,6 +125,9 @@ img.thumb{
   color:#666666 !important;
 }
 #thumbDiv4:hover p, #thumbDiv4:hover h3 {
+  color:#666666 !important;
+}
+#thumbDiv5:hover p, #thumbDiv4:hover h3 {
   color:#666666 !important;
 }
 .navbar-default {
