@@ -4,6 +4,94 @@ html, body {
 body {
   overflow-x:hidden;
 }
+
+#container {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px;
+    background: #333;
+}
+
+.first {
+    -webkit-animation: bannermove 60s linear infinite;
+       -moz-animation: bannermove 60s linear infinite;
+        -ms-animation: bannermove 60s linear infinite;
+         -o-animation: bannermove 60s linear infinite;
+            animation: bannermove 60s linear infinite;
+}
+
+@keyframes "bannermove" {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: -4080px;
+    }
+}
+
+@-moz-keyframes bannermove {
+    0% {
+           margin-left: 0px;
+    }
+    100% {
+        margin-left: -4080px;
+    }
+}
+
+@-webkit-keyframes "bannermove" {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: -4080px;
+    }
+}
+
+@-ms-keyframes "bannermove" {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: -4080px;
+    }
+
+}
+
+@-o-keyframes "bannermove" {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: -4080px;
+    }
+
+}
+
+.logobanner {
+        height: 150px;
+        width: 5600px;
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+}
+
+.logobanner img {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    max-height: 100%;
+}
+
+.logobanner img:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 form label {
   font-size: 14px;
 }
