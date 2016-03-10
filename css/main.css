@@ -315,9 +315,19 @@ p {
   color: white;
   background:#b00000;
 }
+.caption {
+	background: #b00000; text-shadow: none; padding-top 10px; padding-bottom: 5px; display: inline-block; width:100%; max-width: 360px; border: 2px solid white; border-radius: 12px;
+}
 @media (max-width:768px) {
   .logo {
-    max-width:38%;
+    max-width:40%;
+	left: 0px;
+  }
+  .caption {
+	font-size: 32px;  
+  }
+  #myCarousel {
+	  margin-top:64px;
   }
   #pressurecleaningtxt, #sweepingtxt, #constructioncleanuptxt, #graffitiremovaltxt {
     margin-bottom: 100px;
@@ -333,7 +343,9 @@ p {
     color: white;
     background:#b00000;
   }
+  ul.nav a:hover, ul.nav a:focus { border-top: solid #970000 !important; }
 }
 .logo {
-  margin-top:-20px;
+  position: absolute;
+  top: 0px;
 }
