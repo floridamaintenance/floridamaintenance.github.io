@@ -2,61 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>http://www.floridamaintenance.com/</loc>
-    <lastmod>2016-04-04</lastmod>
+    <lastmod>2016-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>http://www.floridamaintenance.com/tou.html</loc>
-    <lastmod>2016-04-04</lastmod>
+    <lastmod>2016-04-26</lastmod>
     <changefreq>never</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
     <loc>http://www.floridamaintenance.com/privacy.html</loc>
-    <lastmod>2016-04-04</lastmod>
+    <lastmod>2016-04-26</lastmod>
     <changefreq>never</changefreq>
     <priority>0.1</priority>
   </url>
   <url>
-    <loc>http://www.floridamaintenance.com/sweeping.html</loc>
-    <lastmod>2016-04-04</lastmod>
+    <loc>http://www.floridamaintenance.com/powersweeping.html</loc>
+    <lastmod>2016-04-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://www.floridamaintenance.com/contactus.html</loc>
-    <lastmod>2016-04-04</lastmod>
+    <lastmod>2016-04-26</lastmod>
     <changefreq>never</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://www.floridamaintenance.com/constructioncleanup.html</loc>
-    <lastmod>2016-04-04</lastmod>
+    <lastmod>2016-04-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://www.floridamaintenance.com/powerscrubbing.html</loc>
-    <lastmod>2016-04-04</lastmod>
+    <lastmod>2016-04-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://www.floridamaintenance.com/graffitiremoval.html</loc>
-    <lastmod>2016-04-04</lastmod>
+    <loc>http://www.floridamaintenance.com/warehousecleaning.html</loc>
+    <lastmod>2016-04-26</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>http://www.floridamaintenance.com/pressurecleaning.html</loc>
-    <lastmod>2016-04-04</lastmod>
+    <lastmod>2016-04-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>http://www.floridamaintenance.com/aboutus.html</loc>
-    <lastmod>2016-04-04</lastmod>
+    <lastmod>2016-04-26</lastmod>
     <changefreq>never</changefreq>
     <priority>0.4</priority>
   </url>
