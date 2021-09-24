@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-sitemap: http://www.floridamaintenance.com/sitemap.xml
+sitemap: https://www.floridamaintenance.com/sitemap.xml
