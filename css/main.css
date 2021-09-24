@@ -437,7 +437,7 @@ p {
   background:#b00000;
 }
 .caption {
-	background: #b00000; text-shadow: none; padding-top 10px; padding-bottom: 5px; display: inline-block; width:100%; max-width: 360px; border: 2px solid white; border-radius: 12px;
+	background: #b00000; text-shadow: none; padding-top: 10px; padding-bottom: 5px; display: inline-block; width:100%; max-width: 360px; border: 2px solid white; border-radius: 12px;
 }
 @media (max-width:768px) {
   .logo {
