@@ -266,7 +266,7 @@ img.thumb{
   opacity: 1.0;
   filter: alpha(opacity=100);
 }
-#pressurecleaningtxt, #powersweepingtxt, #constructioncleanuptxt, #warehousecleaningtxt, #powerscrubbingtxt {
+#pressurecleaningtxt, #powersweepingtxt, #warehousecleaningtxt, #powerscrubbingtxt {
   background-color:#e3e3e3;
   position: absolute;
   bottom: 0;
@@ -279,9 +279,6 @@ img.thumb{
 #powersweeping  {
   background-image:url('../img/power_sweeping_category.jpg');
   background-position: center bottom;
-}
-#constructioncleanup  {
-  background-image:url('../img/construction_cleanup_category.jpg');
 }
 #warehousecleaning  {
   background-image:url('../img/warehouse_category.jpg');
@@ -450,7 +447,7 @@ p {
   #myCarousel {
 	  margin-top:64px;
   }
-  #pressurecleaningtxt, #sweepingtxt, #constructioncleanuptxt, #graffitiremovaltxt {
+  #pressurecleaningtxt, #sweepingtxt, #graffitiremovaltxt {
     margin-bottom: 100px;
   }
   .fixed {
