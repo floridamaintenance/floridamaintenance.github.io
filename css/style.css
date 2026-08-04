@@ -477,7 +477,7 @@ section.about-page-hero .container {
 }
 .page-hero .container { padding: 84px 20px; position: relative; z-index: 2; }
 .pressure-cleaning-hero .container { padding-top: 164px; padding-bottom: 164px; }
-.softwashing-hero { background-position: 77% 55%; }
+.softwashing-hero { background-position: 77% 40%; }
 .softwashing-hero .container { padding-top: 105px; padding-bottom: 105px; }
 .service-page .page-hero .container {
   padding-top: clamp(82px, 9vw, 112px);
