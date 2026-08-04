@@ -1,0 +1,909 @@
+/* Florida Maintenance homepage — subtle textured and grainy gradients */
+
+/* Keep every effect isolated to the original homepage variation. */
+.textured-home-page .hero,
+.textured-home-page .topbar,
+.textured-home-page .logos,
+.textured-home-page .cta-band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.textured-home-page .topbar > .container,
+.textured-home-page .cta-band > .container,
+.textured-home-page .logos .logo-cell {
+  position: relative;
+  z-index: 1;
+}
+
+/* A fine, static grain made entirely with CSS so it stays lightweight. */
+.textured-home-page .hero::after,
+.textured-home-page .topbar::before,
+.textured-home-page .logos::before,
+.textured-home-page .cta-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 28% 32%, rgba(255,255,255,.72) 0 .55px, transparent .8px),
+    radial-gradient(circle at 72% 68%, rgba(0,0,0,.78) 0 .5px, transparent .78px),
+    radial-gradient(circle at 42% 76%, rgba(255,255,255,.42) 0 .45px, transparent .72px);
+  background-size: 4px 4px, 6px 6px, 9px 9px;
+  background-position: 0 0, 2px 1px, 1px 4px;
+  mix-blend-mode: soft-light;
+}
+
+/* Video texture sits above the tint but below the hero copy. */
+.textured-home-page .hero::after {
+  z-index: 1;
+  opacity: .17;
+}
+
+.textured-home-page .hero-overlay {
+  background: linear-gradient(90deg, rgba(10,11,14,.78) 0%, rgba(10,11,14,.58) 46%, rgba(10,11,14,.20) 74%, rgba(10,11,14,.06) 100%);
+}
+
+/* Fill the visible viewport below the header while allowing tall content to grow. */
+.textured-home-page .hero {
+  min-height: calc(100vh - var(--header-h, 124px) - 28px);
+  min-height: calc(100svh - var(--header-h, 124px) - 28px);
+  display: flex;
+  align-items: center;
+}
+
+.textured-home-page .hero > .container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 48px clamp(28px, 5vw, 78px);
+}
+
+.textured-home-page .hero-content {
+  transform: translateY(clamp(-56px, -4vh, -28px));
+}
+
+.textured-home-page .hero-actions {
+  margin-bottom: 0;
+}
+
+.textured-home-page .mascot-section-head-img {
+  filter:
+    drop-shadow(0 10px 8px rgba(16,18,22,.20))
+    drop-shadow(0 24px 26px rgba(16,18,22,.16));
+}
+
+/* Company proof sits outside the video in a quiet, tactile band. */
+.textured-home-page .home-proof {
+  position: relative;
+  color: #fff;
+  background-color: var(--red);
+  background-image:
+    radial-gradient(ellipse at 16% -40%, rgba(255,255,255,.16), transparent 46%),
+    radial-gradient(ellipse at 88% 140%, rgba(60,0,0,.28), transparent 48%),
+    repeating-linear-gradient(117deg, rgba(255,255,255,.018) 0 1px, transparent 1px 6px);
+  border-top: 1px solid rgba(255,255,255,.16);
+  border-bottom: 1px solid rgba(74,0,0,.32);
+}
+
+.textured-home-page .home-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  min-height: 132px;
+  gap: clamp(24px, 4vw, 64px);
+  padding: 24px 0;
+}
+
+.textured-home-page .home-proof-item {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.textured-home-page .home-proof-item strong {
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: clamp(1.55rem, 2.2vw, 2.05rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.textured-home-page .home-proof-item span {
+  margin-top: 7px;
+  color: rgba(255,255,255,.82);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.textured-home-page .home-proof-credential .credential-badge {
+  width: 205px;
+  max-width: 100%;
+}
+
+.textured-home-page .topbar::before,
+.textured-home-page .logos::before,
+.textured-home-page .cta-band::before {
+  z-index: 0;
+  opacity: .18;
+}
+
+.textured-home-page .topbar::before {
+  opacity: .12;
+}
+
+/* Deeper color variation keeps the branded bands from reading as flat fills. */
+.textured-home-page .topbar {
+  background:
+    radial-gradient(ellipse at 78% -80%, rgba(255,255,255,.18), transparent 48%),
+    linear-gradient(118deg, #610000 0%, #b00000 52%, #780000 100%);
+}
+
+.textured-home-page .logos {
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(255,255,255,.14), transparent 32%),
+    radial-gradient(ellipse at 92% 110%, rgba(50,0,0,.38), transparent 44%),
+    linear-gradient(122deg, #630000 0%, #b00000 58%, #760000 100%);
+  box-shadow:
+    var(--shadow-sm),
+    inset 0 1px 0 rgba(255,255,255,.12);
+}
+
+.textured-home-page .cta-band {
+  background:
+    radial-gradient(circle at 50% -28%, rgba(255,255,255,.22), transparent 43%),
+    radial-gradient(ellipse at 92% 120%, rgba(45,0,0,.38), transparent 45%),
+    linear-gradient(118deg, #670000 0%, #b00000 55%, #790000 100%);
+}
+
+/* Pale sections receive a much quieter paper-like texture. */
+.textured-home-page .section.alt {
+  background-color: var(--bg-soft);
+  background-image:
+    radial-gradient(ellipse at 12% 0%, rgba(176,0,0,.035), transparent 38%),
+    radial-gradient(ellipse at 92% 100%, rgba(21,23,28,.035), transparent 40%),
+    repeating-linear-gradient(117deg, rgba(21,23,28,.009) 0 1px, transparent 1px 5px);
+}
+
+/* Keep property-specific programs visible without repeating a second card wall. */
+.textured-home-page #services {
+  padding-bottom: 76px;
+}
+
+.textured-home-page .home-properties {
+  margin-top: 48px;
+  padding-top: 38px;
+  border-top: 1px solid var(--line);
+}
+
+.textured-home-page .home-properties-head {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(300px, .65fr);
+  gap: 38px;
+  align-items: end;
+  margin-bottom: 22px;
+}
+
+.textured-home-page .home-properties-head h3 {
+  margin: 0;
+  font-family: var(--font-head);
+  font-size: clamp(1.6rem, 2.6vw, 2.08rem);
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+
+.textured-home-page .home-properties-head p {
+  max-width: 500px;
+  margin: 0 0 3px;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.textured-home-page .home-property-links {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.textured-home-page .home-property-links a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+  min-height: 86px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,.94);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.textured-home-page .home-property-links a:hover {
+  border-color: rgba(176,0,0,.28);
+  color: var(--red);
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+
+.textured-home-page .home-property-links a:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+}
+
+.textured-home-page .home-property-links span {
+  color: var(--red);
+  font-family: var(--font-head);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+
+.textured-home-page .home-property-links strong {
+  font-family: var(--font-head);
+  font-size: .93rem;
+  line-height: 1.2;
+}
+
+.textured-home-page .home-property-links b {
+  color: var(--red);
+  font-family: var(--font-head);
+  transition: transform .15s ease;
+}
+
+.textured-home-page .home-property-links a:hover b {
+  transform: translateX(4px);
+}
+
+/* A modern service-standard section using the homepage's established system. */
+.textured-home-page .home-standard {
+  position: relative;
+  overflow: hidden;
+  padding-top: 82px;
+  padding-bottom: 86px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background-color: #fff;
+  background-image:
+    radial-gradient(ellipse at 10% 0%, rgba(176,0,0,.045), transparent 38%),
+    radial-gradient(ellipse at 94% 100%, rgba(21,23,28,.035), transparent 40%),
+    repeating-linear-gradient(117deg, rgba(21,23,28,.007) 0 1px, transparent 1px 7px);
+}
+
+.textured-home-page .home-standard-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(310px, .62fr);
+  gap: clamp(42px, 7vw, 82px);
+  align-items: end;
+  margin-bottom: 48px;
+}
+
+.textured-home-page .home-standard-heading h2 {
+  max-width: 15ch;
+  margin: 0;
+  font-family: var(--font-head);
+  font-size: clamp(2.45rem, 4.6vw, 3.75rem);
+  font-weight: 800;
+  letter-spacing: -.035em;
+  line-height: 1.02;
+}
+
+.textured-home-page .home-standard-heading > p {
+  margin: 0 0 3px;
+  padding-left: 24px;
+  border-left: 3px solid var(--red);
+  color: var(--muted);
+  font-size: 1.03rem;
+  line-height: 1.7;
+}
+
+.textured-home-page .home-standard .eyebrow {
+  margin-bottom: .85rem;
+}
+
+.textured-home-page .home-standard-layout {
+  display: grid;
+  grid-template-columns: 185px minmax(0, 1fr);
+  gap: clamp(30px, 4vw, 48px);
+  align-items: stretch;
+}
+
+.textured-home-page .home-standard-mascot {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 230px;
+}
+
+.textured-home-page .home-standard-mascot::before {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(176,0,0,.12), rgba(176,0,0,0) 70%);
+  transform: translateX(-50%);
+}
+
+.textured-home-page .home-standard-mascot img {
+  position: relative;
+  z-index: 1;
+  width: 180px;
+  max-height: 280px;
+  object-fit: contain;
+  object-position: bottom;
+  filter:
+    drop-shadow(0 10px 8px rgba(16,18,22,.18))
+    drop-shadow(0 22px 24px rgba(16,18,22,.13));
+}
+
+.textured-home-page .home-standard-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.textured-home-page .home-standard-cards article {
+  position: relative;
+  min-width: 0;
+  min-height: 230px;
+  overflow: hidden;
+  padding: 31px 25px 26px;
+  border: 1px solid #e0e2e6;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.94);
+  box-shadow: var(--shadow-sm);
+}
+
+.textured-home-page .home-standard-cards article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--red-darker), var(--red));
+}
+
+.textured-home-page .home-standard-number {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  background: rgba(176,0,0,.08);
+  color: var(--red);
+  font-family: var(--font-head);
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  line-height: 1;
+}
+
+.textured-home-page .home-standard-cards h3 {
+  margin: 0 0 10px;
+  font-family: var(--font-head);
+  font-size: 1.24rem;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  line-height: 1.18;
+}
+
+.textured-home-page .home-standard-cards p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .94rem;
+  line-height: 1.62;
+}
+
+/* Work photography and one featured result share a single, faster section. */
+.textured-home-page .home-work-results {
+  border-bottom: 1px solid var(--line);
+  background-color: #f5f6f8;
+  background-image:
+    radial-gradient(ellipse at 10% 0%, rgba(176,0,0,.045), transparent 36%),
+    radial-gradient(ellipse at 94% 100%, rgba(21,23,28,.035), transparent 40%),
+    repeating-linear-gradient(117deg, rgba(21,23,28,.007) 0 1px, transparent 1px 7px);
+}
+
+.textured-home-page .home-work-results .section-head {
+  margin-bottom: 38px;
+}
+
+.textured-home-page .home-work-layout {
+  display: grid;
+  grid-template-columns: minmax(340px, .82fr) minmax(0, 1.35fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.textured-home-page .home-result-feature {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.textured-home-page .home-result-feature .before-after {
+  width: 100%;
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.textured-home-page .home-result-copy {
+  padding: 24px 25px 26px;
+}
+
+.textured-home-page .home-result-label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--red);
+  font-family: var(--font-head);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.textured-home-page .home-result-copy h3 {
+  margin-bottom: 9px;
+  font-family: var(--font-head);
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.textured-home-page .home-result-copy p {
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: .94rem;
+}
+
+.textured-home-page .home-work-gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  align-content: start;
+}
+
+.textured-home-page .home-work-gallery .tile {
+  aspect-ratio: 4 / 3;
+  box-shadow: var(--shadow-sm);
+}
+
+.textured-home-page .home-work-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.textured-home-page .home-work-actions .more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--red);
+  font-family: var(--font-head);
+  font-weight: 800;
+}
+
+.textured-home-page .home-work-actions .more::after {
+  content: "\2192";
+  transition: transform .15s ease;
+}
+
+.textured-home-page .home-work-actions .more:hover::after {
+  transform: translateX(4px);
+}
+
+/* Featured origin story: equipment in action with an overlapping narrative card. */
+.textured-home-page .home-story {
+  position: relative;
+  overflow: hidden;
+  padding-top: 92px;
+  padding-bottom: 96px;
+  background-color: #f8f3e9;
+  background-image:
+    radial-gradient(ellipse at 8% 4%, rgba(176,0,0,.065), transparent 38%),
+    radial-gradient(ellipse at 94% 100%, rgba(21,23,28,.045), transparent 42%),
+    repeating-linear-gradient(117deg, rgba(77,58,32,.012) 0 1px, transparent 1px 6px);
+}
+
+.textured-home-page .home-story-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.28fr) minmax(360px, .82fr);
+  align-items: center;
+}
+
+.textured-home-page .home-story-media {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #d9dadd;
+  box-shadow: var(--shadow);
+}
+
+.textured-home-page .home-story-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 58%, rgba(9,11,14,.56) 100%);
+}
+
+.textured-home-page .home-story-media img {
+  width: 100%;
+  height: clamp(430px, 42vw, 540px);
+  object-fit: cover;
+  object-position: 45% center;
+}
+
+.textured-home-page .home-story-media figcaption {
+  position: absolute;
+  z-index: 1;
+  bottom: 22px;
+  left: 24px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  line-height: 1.15;
+  text-shadow: 0 2px 12px rgba(0,0,0,.45);
+}
+
+.textured-home-page .home-story-media figcaption span {
+  margin-bottom: 5px;
+  color: rgba(255,255,255,.78);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.textured-home-page .home-story-media figcaption strong {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.textured-home-page .home-story-card {
+  position: relative;
+  z-index: 2;
+  margin-left: -68px;
+  padding: clamp(38px, 4.5vw, 54px);
+  border-top: 4px solid var(--red);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(176,0,0,.19), transparent 44%),
+    var(--bg-dark);
+  color: rgba(255,255,255,.80);
+  box-shadow: var(--shadow-lg);
+}
+
+.textured-home-page .home-story-card .eyebrow {
+  color: #ff8d8d;
+}
+
+.textured-home-page .home-story-card .eyebrow::before,
+.textured-home-page .home-story-card .eyebrow::after {
+  background: var(--red);
+}
+
+.textured-home-page .home-story-card h2 {
+  max-width: 14ch;
+  margin: .08rem 0 1.15rem;
+  color: #fff;
+  font-size: clamp(2.2rem, 3.7vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.03;
+}
+
+.textured-home-page .home-story-card p {
+  margin: 0 0 1rem;
+  color: rgba(255,255,255,.76);
+  font-size: .98rem;
+  line-height: 1.7;
+}
+
+.textured-home-page .home-story-card .btn {
+  margin-top: .65rem;
+}
+
+/* Ten representative logos provide proof without turning into a directory. */
+.textured-home-page .clients-section {
+  padding-top: 66px;
+  padding-bottom: 66px;
+}
+
+.textured-home-page .clients-section .section-head {
+  margin-bottom: 32px;
+}
+
+.textured-home-page .home-client-logos {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  max-width: 980px;
+  margin: 0 auto;
+  gap: 14px;
+  padding: 18px;
+}
+
+.textured-home-page .home-client-logos .logo-cell {
+  height: 92px;
+  padding: 12px;
+}
+
+.textured-home-page .home-client-logos img {
+  max-width: 132px;
+  max-height: 66px;
+}
+
+/* A restrained dark texture closes the page without affecting readability. */
+.textured-home-page .site-footer {
+  background-color: var(--bg-dark);
+  background-image:
+    radial-gradient(ellipse at 82% -5%, rgba(176,0,0,.20), transparent 37%),
+    radial-gradient(ellipse at 12% 120%, rgba(255,255,255,.045), transparent 42%),
+    repeating-linear-gradient(122deg, rgba(255,255,255,.016) 0 1px, transparent 1px 5px);
+}
+
+@media (max-width: 760px) {
+  .textured-home-page .hero {
+    min-height: calc(100vh - var(--header-h, 124px) - 20px);
+    min-height: calc(100svh - var(--header-h, 124px) - 20px);
+    background: url('../img/optimized/pressure-cleaning-garage-wall-wash-1200.webp') 52% center / cover;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .textured-home-page .hero-overlay {
+    background: transparent;
+  }
+
+  .textured-home-page .hero > .container {
+    padding: 44px 20px;
+  }
+
+  .textured-home-page .hero-content {
+    transform: none;
+  }
+
+  .textured-home-page .home-proof-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 18px;
+    min-height: 0;
+    padding: 28px 0;
+  }
+
+  .textured-home-page .home-proof-item strong {
+    font-size: 1.5rem;
+  }
+
+  .textured-home-page .home-properties {
+    margin-top: 38px;
+    padding-top: 30px;
+  }
+
+  .textured-home-page .home-properties-head {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .textured-home-page .home-property-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .textured-home-page .home-property-links a {
+    min-height: 76px;
+    padding: 13px;
+  }
+
+  .textured-home-page .home-property-links a:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .textured-home-page .home-standard {
+    padding-top: 60px;
+    padding-bottom: 64px;
+  }
+
+  .textured-home-page .home-standard-heading,
+  .textured-home-page .home-standard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .textured-home-page .home-standard-heading {
+    gap: 22px;
+    margin-bottom: 34px;
+  }
+
+  .textured-home-page .home-standard-heading h2 {
+    max-width: 14ch;
+    font-size: clamp(2.25rem, 10vw, 3.15rem);
+  }
+
+  .textured-home-page .home-standard-heading > p {
+    padding: 17px 0 0;
+    border-top: 3px solid var(--red);
+    border-left: 0;
+  }
+
+  .textured-home-page .home-standard-mascot {
+    display: none;
+  }
+
+  .textured-home-page .home-standard-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .textured-home-page .home-standard-cards article {
+    min-height: 0;
+    padding: 27px 22px 23px;
+  }
+
+  .textured-home-page .home-standard-number {
+    margin-bottom: 18px;
+  }
+
+  .textured-home-page .home-work-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .textured-home-page .home-work-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .textured-home-page .home-work-gallery .tile .cap {
+    padding: 10px 11px;
+  }
+
+  .textured-home-page .home-work-gallery .tile .cap .cat {
+    display: none;
+  }
+
+  .textured-home-page .home-work-gallery .tile .cap .ttl {
+    font-size: .82rem;
+    line-height: 1.2;
+  }
+
+  .textured-home-page .home-work-actions {
+    justify-content: center;
+  }
+
+  .textured-home-page .home-story {
+    padding-top: 58px;
+    padding-bottom: 64px;
+  }
+
+  .textured-home-page .home-story-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .textured-home-page .home-story-media img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-position: 42% center;
+  }
+
+  .textured-home-page .home-story-media figcaption {
+    bottom: 54px;
+    left: 18px;
+  }
+
+  .textured-home-page .home-story-card {
+    margin: -34px 14px 0;
+    padding: 31px 24px 28px;
+  }
+
+  .textured-home-page .home-story-card h2 {
+    font-size: clamp(2.05rem, 9vw, 2.7rem);
+  }
+
+  .textured-home-page .home-client-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .textured-home-page .home-client-logos .logo-cell {
+    height: 82px;
+  }
+
+  .textured-home-page .hero::after {
+    opacity: .13;
+  }
+
+  .textured-home-page .mascot-section-head-img {
+    filter: none;
+  }
+
+  .textured-home-page .logos::before,
+  .textured-home-page .cta-band::before {
+    opacity: .15;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 980px) {
+  .textured-home-page .home-property-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .textured-home-page .home-standard-heading {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, .7fr);
+    gap: 38px;
+  }
+
+  .textured-home-page .home-standard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .textured-home-page .home-standard-mascot {
+    display: none;
+  }
+
+  .textured-home-page .home-standard-cards {
+    gap: 15px;
+  }
+
+  .textured-home-page .home-work-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .textured-home-page .home-work-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .textured-home-page .home-client-logos {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .textured-home-page .home-story-layout {
+    grid-template-columns: minmax(0, 1.08fr) minmax(330px, .92fr);
+  }
+
+  .textured-home-page .home-story-card {
+    margin-left: -42px;
+    padding: 36px;
+  }
+
+  .textured-home-page .home-story-media img {
+    height: 500px;
+    object-position: 42% center;
+  }
+}
+
+@media (min-width: 761px) and (max-height: 720px) {
+  .textured-home-page .hero > .container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .textured-home-page .hero::after,
+  .textured-home-page .topbar::before,
+  .textured-home-page .logos::before,
+  .textured-home-page .cta-band::before {
+    opacity: .08;
+  }
+}
