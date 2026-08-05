@@ -993,7 +993,7 @@ h2 { font-weight: 800; }
 /* ---------- Hero background video ---------- */
 .hero {
   overflow: hidden;
-  background: var(--bg-dark) url('../img/optimized/pressure-cleaning-garage-wall-wash-1200.webp') 52% 30% / cover no-repeat;
+  background: var(--bg-dark) url('../img/optimized/hero-video-first-visible-frame-1600.webp') center / cover no-repeat;
 }
 .hero-video {
   position: absolute; inset: 0; width: 100%; height: 100%;
@@ -1044,14 +1044,14 @@ h2 { font-weight: 800; }
 
 /* On phones, keep the video and soften the overlay for the tighter crop. */
 @media (max-width: 760px) {
-  .hero { background: linear-gradient(rgba(15,16,20,.42), rgba(15,16,20,.60)), url('../img/optimized/pressure-cleaning-garage-wall-wash-1200.webp') 52% center / cover; }
+  .hero { background: linear-gradient(rgba(15,16,20,.42), rgba(15,16,20,.60)), url('../img/optimized/hero-video-first-visible-frame-1600.webp') center / cover; }
   .hero-overlay { background: linear-gradient(90deg, rgba(10,11,14,.36), rgba(10,11,14,.08)); }
 }
 
 /* Respect reduced-motion: swap the autoplaying video for a still frame */
 @media (prefers-reduced-motion: reduce) {
   .hero-video { display: none; }
-  .hero { background: linear-gradient(rgba(15,16,20,.42), rgba(15,16,20,.60)), url('../img/optimized/pressure-cleaning-garage-wall-wash-1200.webp') 52% 30% / cover; }
+  .hero { background: linear-gradient(rgba(15,16,20,.42), rgba(15,16,20,.60)), url('../img/optimized/hero-video-first-visible-frame-1600.webp') center / cover; }
 }
 
 /* ---------- Welcome block: polished mobile layout ---------- */

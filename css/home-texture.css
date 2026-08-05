@@ -666,7 +666,7 @@
   .textured-home-page .hero {
     min-height: calc(100vh - var(--header-h, 124px) - 20px);
     min-height: calc(100svh - var(--header-h, 124px) - 20px);
-    background: url('../img/optimized/pressure-cleaning-garage-wall-wash-1200.webp') 52% center / cover;
+    background: url('../img/optimized/hero-video-first-visible-frame-1600.webp') center / cover;
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
