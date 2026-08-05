@@ -771,7 +771,6 @@ textarea.form-control { resize: vertical; min-height: 130px; }
   .logos img { max-height: 72px; max-width: 132px; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .hero .container { padding-top: 64px; padding-bottom: 64px; }
-  .hero-call-secondary { display: none; }
   .call-fab { display: inline-flex; }
   .service-page .site-footer { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
 }
