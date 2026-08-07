@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20260804-centered-lightbox-arrows">
+    <link rel="stylesheet" href="css/style.css?v=20260807-quote-form">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -105,15 +105,34 @@
                         <img src="img/optimized/leo-contact-calendar-600.webp" alt="Leo, the Florida Maintenance mascot, ready to help plan a cleaning service" width="496" height="600" loading="lazy" decoding="async">
                     </figure>
                     <div class="form-card">
-                        <h3>Send Us a Message</h3>
-                        <script type="text/javascript">var submitted=false;</script>
-                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='thanks.html';}"></iframe>
-                        <form action="https://docs.google.com/a/floridamaintenance.com/forms/d/1FJs0borTObSkGq0qUNw7YKpVHK2fd5Oz8d7v2g1tJn4/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-                            <div class="form-group"><label for="entry_1812115398">Name</label><input type="text" class="form-control" name="entry.1812115398" id="entry_1812115398" autocomplete="name" required aria-required="true"></div>
-                            <div class="form-group"><label for="entry_1025032408">Email Address</label><input type="email" class="form-control" name="entry.1025032408" id="entry_1025032408" autocomplete="email" required aria-required="true"></div>
-                            <div class="form-group"><label for="entry_1075080236">Phone Number</label><input type="tel" class="form-control" name="entry.1075080236" id="entry_1075080236" autocomplete="tel"></div>
-                            <div class="form-group"><label for="entry_1371431951">Message</label><textarea class="form-control" rows="4" name="entry.1371431951" id="entry_1371431951" autocomplete="off"></textarea></div>
-                            <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">Submit</button>
+                        <h3>Request a Free Quote</h3>
+                        <form id="quote-form" class="quote-form-grid" data-quote-form data-success-url="thanks.html?submitted=1" action="https://formspree.io/f/xyegkyyw" method="post">
+                            <div class="form-group"><label for="full_name">Full Name</label><input type="text" class="form-control" name="full_name" id="full_name" autocomplete="name" minlength="2" maxlength="80" required aria-required="true"></div>
+                            <div class="form-group"><label for="company">Company or Organization</label><input type="text" class="form-control" name="company" id="company" autocomplete="organization" minlength="2" maxlength="120" required aria-required="true"></div>
+                            <div class="form-group"><label for="email">Work Email</label><input type="email" class="form-control" name="email" id="email" autocomplete="email" maxlength="254" required aria-required="true"></div>
+                            <div class="form-group"><label for="phone">Phone <span class="field-optional">(optional)</span></label><input type="tel" class="form-control" name="phone" id="phone" autocomplete="tel" inputmode="tel" maxlength="30"></div>
+                            <div class="form-group">
+                                <label for="service">Service Needed</label>
+                                <select class="form-control" name="service" id="service" required aria-required="true">
+                                    <option value="" selected disabled>Select a service</option>
+                                    <option value="Pressure Cleaning">Pressure Cleaning</option>
+                                    <option value="Power Sweeping">Power Sweeping</option>
+                                    <option value="Power Scrubbing">Power Scrubbing</option>
+                                    <option value="Soft Washing">Soft Washing</option>
+                                    <option value="Not Sure / Multiple Services">Not Sure / Multiple Services</option>
+                                </select>
+                            </div>
+                            <div class="form-group"><label for="property_location">Property Location</label><input type="text" class="form-control" name="property_location" id="property_location" autocomplete="postal-code" maxlength="100" placeholder="City or ZIP code" required aria-required="true"></div>
+                            <div class="form-group"><label for="project_details">Project Details</label><textarea class="form-control" rows="5" name="project_details" id="project_details" minlength="20" maxlength="1500" placeholder="Tell us about the property, surfaces and service schedule." required aria-required="true"></textarea></div>
+                            <div class="form-group">
+                                <label class="quote-form-confirmation" for="commercial_property"><input type="checkbox" name="commercial_property" id="commercial_property" value="yes" required aria-required="true"> <span>This request is for a commercial, industrial, or infrastructure property.</span></label>
+                            </div>
+                            <div class="quote-form-honeypot" aria-hidden="true"><label for="quote_website">Leave this field blank</label><input type="text" name="_gotcha" id="quote_website" tabindex="-1" autocomplete="off"></div>
+                            <input type="hidden" name="source_page" value="">
+                            <input type="hidden" name="form_started_at" value="">
+                            <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">Request My Free Quote</button>
+                            <p class="quote-form-privacy">We'll only use your information to respond to your request. See our <a href="privacy.html">Privacy Policy</a>.</p>
+                            <div class="quote-form-status" data-form-status role="status" aria-live="polite"></div>
                         </form>
                     </div>
                 </div>
@@ -173,6 +192,7 @@
 
     <a href="tel:305-900-5464" class="call-fab">📞 Call Us</a>
 
+    <script src="js/quote-form.js?v=20260807" defer></script>
     <script>
     (function () {
         function syncHeaderOffset() {
