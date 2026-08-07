@@ -279,38 +279,6 @@
         });
     }
 
-    document.querySelectorAll('form[action*="docs.google.com"]').forEach(function (form) {
-        var submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
-        var submitStatus = document.createElement('p');
-        submitStatus.className = 'form-submit-status';
-        submitStatus.setAttribute('role', 'status');
-        submitStatus.setAttribute('aria-live', 'polite');
-        if (submitButton) submitButton.insertAdjacentElement('afterend', submitStatus);
-
-        form.addEventListener('submit', function (event) {
-            if (form.dataset.submitting === 'true') {
-                event.preventDefault();
-                return;
-            }
-            var title = document.querySelector('h1');
-            var message = form.querySelector('textarea[name="entry.1371431951"]');
-            if (title && message) {
-                var prefix = 'Service requested: ' + title.textContent.trim();
-                if (message.value.indexOf(prefix) !== 0) {
-                    message.value = prefix + '\n\n' + message.value.trim();
-                }
-            }
-            form.dataset.submitting = 'true';
-            submitStatus.textContent = 'Sending your request…';
-            if (submitButton) {
-                submitButton.disabled = true;
-                submitButton.setAttribute('aria-disabled', 'true');
-                if (submitButton.tagName === 'BUTTON') submitButton.textContent = 'Sending…';
-                else submitButton.value = 'Sending…';
-            }
-        });
-    });
-
     var year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 })();
